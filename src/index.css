@@ -1,0 +1,15 @@
+@import "./wedding.css";
+
+/* Custom utility overrides */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #faf5ee;
+  color: #3b2a26;
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+dialog::backdrop {
+  background: transparent;
+}

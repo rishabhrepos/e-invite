@@ -1,0 +1,6 @@
+{
+  "name": "Kalyanam - Digital Indian Wedding Invitation",
+  "description": "A vibrant digital Indian wedding invitation card featuring Lord Ganesha, Haldi, Mehndi, Sangeet, and Vivah ceremonies in Hindi and English with royal animations, music, RSVP, and itinerary.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
