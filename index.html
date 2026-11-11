@@ -3,21 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Purva Sharma &amp; Rishabh Mishra are getting married on 11 December 2026 in Varanasi. Join their celebrations." />
     <meta name="theme-color" content="#702d3c" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Purva Sharma &amp; Rishabh Mishra | Wedding invitation" />
-    <meta property="og:description" content="Purva Sharma &amp; Rishabh Mishra are getting married on 11 December 2026 in Varanasi. Join their celebrations." />
-    <meta property="og:site_name" content="Hues &amp; Whispers" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <title>Purva Sharma &amp; Rishabh Mishra | Wedding invitation</title>
+    <meta name="robots" content="noindex" />
+    <title>Purva &amp; Rishabh | Wedding invitation</title>
     <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+Devanagari:wght@400;500;600;700;800&family=Rozha+One&family=Yatra+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Manrope:wght@600&family=Noto+Serif+Devanagari:wght@600&display=swap" rel="stylesheet" />
+    <style>
+      body { margin: 0; min-height: 100svh; display: grid; place-items: center; background: #faf5ee; color: #3b2a26; font: 600 14px/1.5 Manrope, system-ui, sans-serif; text-align: center; }
+      /* card frame: same values as .quote-container (WeddingBlessingQuote) in src/wedding.css */
+      main {
+        position: relative; box-sizing: border-box; width: min(92vw, 34rem); margin: 24px 0;
+        padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1.5rem, 4vw, 4rem);
+        background: radial-gradient(circle at 50% 0%, rgba(255, 244, 222, .95), rgba(253, 244, 236, .92)), linear-gradient(135deg, #fffcf7, #fff7ee);
+        border: 1px solid rgba(222, 177, 81, .4); border-radius: 1.5rem;
+        box-shadow: 0 16px 48px rgba(112, 45, 60, .08), 0 4px 16px rgba(0, 0, 0, .04), inset 0 1px 2px #fff;
+      }
+      main::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(222, 177, 81, .22); border-radius: 1.15rem; pointer-events: none; }
+      .ornament { display: flex; align-items: center; justify-content: center; gap: 1rem; color: #9b1c3a; letter-spacing: .3em; font-size: .9rem; }
+      .ornament::before, .ornament::after { content: ""; flex: 1; max-width: 8rem; height: 1px; background: linear-gradient(90deg, transparent, rgba(194, 65, 12, .45), transparent); }
+      .ornament--top { margin-bottom: 1.75rem; }
+      .ornament--bottom { margin-top: 2rem; }
+      .gem { width: 7px; height: 7px; background: #c2410c; transform: rotate(45deg); opacity: .7; }
+      .ganesha { display: block; width: 5rem; height: auto; margin: 0 auto .35rem; }
+      .mantra { margin: 0 0 1.5rem; color: #720106; font: 600 1rem/1.4 "Noto Serif Devanagari", serif; }
+      h1 { font: 400 clamp(2.6rem, 9vw, 4rem)/1.1 Allura, cursive; color: #702d3c; margin: 0 0 .5rem; }
+      .meta { margin: 0 0 2rem; letter-spacing: .18em; text-transform: uppercase; font-size: 11px; }
+      nav { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+      nav a { min-width: 11rem; padding: 14px 22px; border: 1px solid #702d3c; border-radius: 4px; color: #702d3c; text-decoration: none; }
+      nav a:first-child, nav a:hover { background: #702d3c; color: #fffaf4; }
+    </style>
   </head>
-  <body class="selection:bg-[#702d3c] selection:text-white">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body>
+    <main>
+      <div class="ornament ornament--top" aria-hidden="true">&#10022; &#10048; &#10022;</div>
+      <img class="ganesha" src="/lord_ganesha.svg" alt="Lord Ganesha" width="1200" height="1310" />
+      <p class="mantra" lang="hi">॥ ॐ नमः शिवाय ॥</p>
+      <h1>Purva &amp; Rishabh</h1>
+      <p class="meta">11 December 2026 &middot; Varanasi</p>
+      <nav aria-label="Choose an invitation">
+        <a href="/rishabh/">Rishabh&rsquo;s invitation</a>
+        <a href="/purva/">Purva&rsquo;s invitation</a>
+      </nav>
+      <div class="ornament ornament--bottom" aria-hidden="true"><span class="gem"></span></div>
+    </main>
   </body>
 </html>

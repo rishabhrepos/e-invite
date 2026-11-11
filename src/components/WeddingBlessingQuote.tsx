@@ -1,7 +1,7 @@
-import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { invite, coupleLine } from '../data/invite';
 
-export const WeddingBlessingQuote: React.FC = () => {
+export const WeddingBlessingQuote = () => {
   const { lang, t } = useLanguage();
 
   return (
@@ -17,7 +17,7 @@ export const WeddingBlessingQuote: React.FC = () => {
         {/* Traditional Sanskrit Shloka */}
         <div className="quote-shloka">
           <p className="quote-shloka-heading">
-            {lang === 'hi' ? '॥ मंगल श्लोक ॥' : '|| Auspicious Shloka ||'}
+            {t('|| Auspicious Shloka ||', '॥ मंगल श्लोक ॥')}
           </p>
           <blockquote className="quote-shloka-text">
             मंगलम् भगवान विष्णुः, मंगलम् गरुड़ध्वजः।<br />
@@ -29,26 +29,23 @@ export const WeddingBlessingQuote: React.FC = () => {
         <div className="quote-main-body">
           <span className="quote-mark-large" aria-hidden="true">&ldquo;</span>
           <p className="quote-text">
-            {t(
-              'Two souls united by seven sacred vows into a lifetime of endless love, faith, and shared dreams. Your gracious presence and heartfelt blessings make our celebrations complete.',
-              'सात फेरों का यह पावन बंधन, दो हृदयों का अनंत संगम है। हमारे जीवन के इस सबसे खूबसूरत अध्याय की शुरुआत पर आपका स्नेहिल आशीर्वाद और सान्निध्य हमारी सबसे अनमोल धरोहर होगी।'
-            )}
+            {invite.quote.text[lang]}
           </p>
         </div>
 
         {/* Couple Signature & Family Names */}
         <div className="quote-footer-details">
           <p className="quote-couple-names">
-            {t('Purva Sharma & Rishabh Mishra', 'पूर्वा शर्मा एवं ऋषभ मिश्रा')}
+            {coupleLine(lang)}
           </p>
-          <p className="quote-hashtag">#RishabhKiPurva</p>
+          <p className="quote-hashtag">{invite.hashtag}</p>
           <div className="quote-subdetails">
-            <span>{t('Friday, 11th December 2026', 'शुक्रवार, ११ दिसंबर २०२६')}</span>
+            <span>{invite.dateLine[lang]}</span>
             <span className="quote-dot" aria-hidden="true">&bull;</span>
-            <span>{t('Varanasi', 'वाराणसी')}</span>
+            <span>{invite.city[lang]}</span>
           </div>
           <p className="quote-family-hosts">
-            {t('Sharma & Mishra Family Cordially Welcomes You', 'शर्मा एवं मिश्रा परिवार आपका सादर वंदन करता है')}
+            {invite.quote.hosts[lang]}
           </p>
         </div>
 

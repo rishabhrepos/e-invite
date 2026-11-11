@@ -21,15 +21,16 @@ export const FloatingPetals: React.FC = () => {
       {petalsConfig.map((p, idx) => (
         <span
           key={idx}
-          style={{
-            // @ts-expect-error CSS variables
-            '--x': p.x,
-            '--size': p.size,
-            '--drift': p.drift,
-            '--turn': p.turn,
-            '--fall': p.fall,
-            '--delay': p.delay,
-          }}
+          style={
+            {
+              '--x': p.x,
+              '--size': p.size,
+              '--drift': p.drift,
+              '--turn': p.turn,
+              '--fall': p.fall,
+              '--delay': p.delay,
+            } as React.CSSProperties
+          }
         />
       ))}
     </div>

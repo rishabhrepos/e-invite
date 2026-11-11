@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { invite, art } from '../data/invite';
+import { Icon } from './Icon';
 
-const WEDDING_TIMESTAMP = Date.parse('2026-12-11T18:00:00+05:30');
+const WEDDING_TIMESTAMP = Date.parse(invite.weddingISO);
+const [first, second] = invite.couple;
 
 export const FloralHero: React.FC = () => {
   const { lang, t } = useLanguage();
@@ -108,18 +111,18 @@ export const FloralHero: React.FC = () => {
 
           <h1 className="hero-names-title" id="couple-names">
             <span className="hero-names-bride">
-              <span className="hero-name-mobile">{t('Purva', 'पूर्वा')}</span>
-              <span className="hero-name-desktop">{t('Purva Sharma', 'पूर्वा शर्मा')}</span>
+              <span className="hero-name-mobile">{first.short[lang]}</span>
+              <span className="hero-name-desktop">{first.full[lang]}</span>
             </span>
             <span className="hero-names-amp">&amp;</span>
             <span className="hero-names-groom">
-              <span className="hero-name-mobile">{t('Rishabh', 'ऋषभ')}</span>
-              <span className="hero-name-desktop">{t('Rishabh Mishra', 'ऋषभ मिश्रा')}</span>
+              <span className="hero-name-mobile">{second.short[lang]}</span>
+              <span className="hero-name-desktop">{second.full[lang]}</span>
             </span>
           </h1>
 
           <p className="hero-preamble">{t('Are Getting Married', 'परिणय सूत्र में बंधने जा रहे हैं')}</p>
-          <p className="hero-hashtag">#RishabhKiPurva</p>
+          <p className="hero-hashtag">{invite.hashtag}</p>
 
           <div className="hero-divider-ornament" aria-hidden="true">
             <span />
@@ -127,17 +130,13 @@ export const FloralHero: React.FC = () => {
 
           <div className="hero-icon-row">
             <span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M7 3v4m10-4v4M4 10h16M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1Z" />
-              </svg>
-              {t('Friday, 11 December 2026', 'शुक्रवार, ११ दिसंबर २०२६')}
+              <Icon name="calendar" size={14} />
+              {invite.dateLine[lang]}
             </span>
             <span className="hero-icon-row__sep" aria-hidden="true" />
             <span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0ZM15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-              </svg>
-              {t('Varanasi', 'वाराणसी')}
+              <Icon name="pin" size={14} />
+              {invite.city[lang]}
             </span>
           </div>
 
@@ -169,12 +168,9 @@ export const FloralHero: React.FC = () => {
         <div className="floral-hero-portrait">
           <img
             className="hero-characters-img"
-            src="/artwork/468e9eca322ab2a71f43/640.webp"
-            srcSet="/artwork/468e9eca322ab2a71f43/320.webp 320w, /artwork/468e9eca322ab2a71f43/640.webp 640w, /artwork/468e9eca322ab2a71f43/960.webp 960w"
+            {...art(invite.heroPortrait)}
             sizes="(min-width: 1024px) 512px, (min-width: 480px) 448px, 92vw"
-            width="1122"
-            height="1402"
-            alt="Illustration of Purva Sharma and Rishabh Mishra"
+            alt={`Illustration of ${first.full.en} and ${second.full.en}`}
             loading="eager"
             fetchPriority="high"
           />

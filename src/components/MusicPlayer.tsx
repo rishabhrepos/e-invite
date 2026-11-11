@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect, forwardRef, useImperativeHandle } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { invite } from '../data/invite';
 
 export interface MusicPlayerHandle {
   play: () => void;
@@ -7,7 +8,7 @@ export interface MusicPlayerHandle {
 }
 
 export const MusicPlayer = forwardRef<MusicPlayerHandle>((_, ref) => {
-  const { lang } = useLanguage();
+  const { t } = useLanguage();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -15,6 +16,7 @@ export const MusicPlayer = forwardRef<MusicPlayerHandle>((_, ref) => {
   const synthContextRef = useRef<AudioContext | null>(null);
   const synthOscillatorsRef = useRef<OscillatorNode[]>([]);
   const isSynthPlayingRef = useRef(false);
+  const synthIntervalRef = useRef<number | undefined>(undefined);
 
   const startSynthMelody = () => {
     try {
@@ -49,11 +51,7 @@ export const MusicPlayer = forwardRef<MusicPlayerHandle>((_, ref) => {
       synthOscillatorsRef.current.push(droneOsc);
 
       // Melody notes loop
-      const interval = setInterval(() => {
-        if (!isSynthPlayingRef.current || ctx.state === 'closed') {
-          clearInterval(interval);
-          return;
-        }
+      synthIntervalRef.current = window.setInterval(() => {
         const noteOsc = ctx.createOscillator();
         const noteGain = ctx.createGain();
         noteOsc.type = 'sine';
@@ -76,6 +74,7 @@ export const MusicPlayer = forwardRef<MusicPlayerHandle>((_, ref) => {
 
   const stopSynthMelody = () => {
     isSynthPlayingRef.current = false;
+    clearInterval(synthIntervalRef.current);
     try {
       synthOscillatorsRef.current.forEach((osc) => {
         try { osc.stop(); } catch {}
@@ -88,89 +87,39 @@ export const MusicPlayer = forwardRef<MusicPlayerHandle>((_, ref) => {
     synthContextRef.current = null;
   };
 
-  useImperativeHandle(ref, () => ({
-    play: () => {
-      const audio = audioRef.current;
-      if (audio) {
-        audio.currentTime = 0;
-        const playPromise = audio.play();
-        if (playPromise !== undefined) {
-          playPromise
-            .then(() => setIsPlaying(true))
-            .catch(() => {
-              startSynthMelody();
-            });
-        }
-      } else {
-        startSynthMelody();
-      }
-    },
-    pause: () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-      }
-      stopSynthMelody();
-      setIsPlaying(false);
-    },
-  }));
-
-  const toggleMusic = () => {
+  const play = () => {
+    stopSynthMelody();
     const audio = audioRef.current;
-    if (isPlaying) {
-      if (audio) {
-        audio.pause();
-      }
-      stopSynthMelody();
-      setIsPlaying(false);
-    } else {
-      stopSynthMelody();
-      if (audio) {
-        const playPromise = audio.play();
-        if (playPromise !== undefined) {
-          playPromise
-            .then(() => {
-              setIsPlaying(true);
-            })
-            .catch((err) => {
-              console.warn('Audio play failed, falling back to synth melody:', err);
-              startSynthMelody();
-            });
-        } else {
-          setIsPlaying(true);
-        }
-      } else {
-        startSynthMelody();
-      }
-    }
+    if (!audio) return startSynthMelody();
+    audio.play().catch((err) => {
+      console.warn('Audio play failed, falling back to synth melody:', err);
+      startSynthMelody();
+    });
   };
+
+  const pause = () => {
+    audioRef.current?.pause();
+    stopSynthMelody();
+    setIsPlaying(false);
+  };
+
+  useImperativeHandle(ref, () => ({ play, pause }));
 
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
-
+    // <audio loop> never fires 'ended'; play/pause events are the source of truth
     const onPlay = () => setIsPlaying(true);
     const onPause = () => {
       if (!isSynthPlayingRef.current) setIsPlaying(false);
     };
-    const onEnded = () => {
-      audio.currentTime = 0;
-      audio.play().catch(() => setIsPlaying(false));
-    };
-    const onError = () => {
-      console.warn('Audio element error loading /music/wedding-music.mp3');
-    };
-
+    const onError = () => console.warn(`Audio element error loading ${invite.music}`);
     audio.addEventListener('play', onPlay);
-    audio.addEventListener('playing', onPlay);
     audio.addEventListener('pause', onPause);
-    audio.addEventListener('ended', onEnded);
     audio.addEventListener('error', onError);
-
     return () => {
       audio.removeEventListener('play', onPlay);
-      audio.removeEventListener('playing', onPlay);
       audio.removeEventListener('pause', onPause);
-      audio.removeEventListener('ended', onEnded);
       audio.removeEventListener('error', onError);
       stopSynthMelody();
     };
@@ -185,7 +134,7 @@ export const MusicPlayer = forwardRef<MusicPlayerHandle>((_, ref) => {
     >
       <audio
         ref={audioRef}
-        src="/music/wedding-music.mp3"
+        src={invite.music}
         preload="auto"
         loop
         playsInline
@@ -195,16 +144,12 @@ export const MusicPlayer = forwardRef<MusicPlayerHandle>((_, ref) => {
       <button
         type="button"
         className="music-toggle"
-        onClick={toggleMusic}
+        onClick={isPlaying ? pause : play}
         aria-pressed={isPlaying}
         aria-label={
           isPlaying
-            ? lang === 'hi'
-              ? 'संगीत रोकें'
-              : 'Pause music: Wedding shehnai'
-            : lang === 'hi'
-            ? 'संगीत बजाएं'
-            : 'Play music: Wedding shehnai'
+            ? t('Pause music: Wedding shehnai', 'संगीत रोकें')
+            : t('Play music: Wedding shehnai', 'संगीत बजाएं')
         }
       >
         <svg
@@ -239,13 +184,7 @@ export const MusicPlayer = forwardRef<MusicPlayerHandle>((_, ref) => {
         </svg>
 
         <span className="music-label-text" data-music-label>
-          {isPlaying
-            ? lang === 'hi'
-              ? 'संगीत रोकें'
-              : 'Pause music'
-            : lang === 'hi'
-            ? 'संगीत बजाएं'
-            : 'Play music'}
+          {isPlaying ? t('Pause music', 'संगीत रोकें') : t('Play music', 'संगीत बजाएं')}
         </span>
 
         {/* Visual equalizer wave animation when playing */}

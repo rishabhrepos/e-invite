@@ -1,0 +1,385 @@
+{
+  "slug": "rishabh",
+  "weddingISO": "2026-12-11T18:00:00+05:30",
+  "dateLine": {
+    "en": "Friday, 11 December 2026",
+    "hi": "शुक्रवार, ११ दिसंबर २०२६"
+  },
+  "city": {
+    "en": "Varanasi",
+    "hi": "वाराणसी"
+  },
+  "hashtag": "#RishabhKiPurva",
+  "couple": [
+    {
+      "full": {
+        "en": "Purva Sharma",
+        "hi": "पूर्वा शर्मा"
+      },
+      "short": {
+        "en": "Purva",
+        "hi": "पूर्वा"
+      }
+    },
+    {
+      "full": {
+        "en": "Rishabh Mishra",
+        "hi": "ऋषभ मिश्रा"
+      },
+      "short": {
+        "en": "Rishabh",
+        "hi": "ऋषभ"
+      }
+    }
+  ],
+  "families": [
+    {
+      "names": {
+        "en": "Shushil Kumar\n& Pravesh Sharma",
+        "hi": "श्री सुशील कुमार\nएवं श्रीमती प्रवेश शर्मा"
+      },
+      "role": {
+        "en": "Bride's parents",
+        "hi": "कन्या के माता-पिता"
+      }
+    },
+    {
+      "names": {
+        "en": "Ram Balak\n& Sarojani Mishra",
+        "hi": "श्री राम बालक\nएवं श्रीमती सरोजनी मिश्रा"
+      },
+      "role": {
+        "en": "Groom's parents",
+        "hi": "वर के माता-पिता"
+      }
+    }
+  ],
+  "invitation": {
+    "preamble": {
+      "en": "Together with our families\nWe joyfully invite you to\nCelebrate the wedding of",
+      "hi": "परमपिता परमात्मा के आशीर्वाद एवं समस्त परिजनों के साथ\nहम आपको सादर आमंत्रित करते हैं\nपरिणय उत्सव में"
+    },
+    "time": {
+      "en": "6:00 pm onwards",
+      "hi": "सायं ६:०० बजे से"
+    },
+    "venue": {
+      "en": "Royal Green Garden, Varanasi",
+      "hi": "रॉयल ग्रीन गार्डन, वाराणसी"
+    },
+    "venueSub": {
+      "en": "Near Natiniyadai",
+      "hi": "नतिनियादाई के पास"
+    }
+  },
+  "heroPortrait": {
+    "base": "/artwork/468e9eca322ab2a71f43",
+    "widths": [
+      320,
+      640,
+      960
+    ],
+    "w": 1122,
+    "h": 1402
+  },
+  "events": [
+    {
+      "id": "haldi",
+      "name": {
+        "en": "Haldi",
+        "hi": "हल्दी"
+      },
+      "bg": "#fffbeb",
+      "accent": "#fbbf24",
+      "onAccent": "#000000",
+      "artwork": {
+        "base": "/artwork/3b98e832e6936b3b112a",
+        "widths": [
+          320,
+          640,
+          960
+        ],
+        "w": 960,
+        "h": 1091
+      },
+      "corners": [
+        "/artwork/a641cb3a246c20dd9b8a/160.webp",
+        "/artwork/a508b1086628b7b2fc13/160.webp",
+        "/artwork/6065f969f6ac3275419a/160.webp",
+        "/artwork/ed5cc0b5e1bd345f03c9/160.webp"
+      ],
+      "date": {
+        "en": "09 December 2026",
+        "hi": "०९ दिसंबर २०२६ (बुधवार)"
+      },
+      "time": {
+        "en": "10:00 am – 2:00 pm",
+        "hi": "प्रातः १०:०० से दोपहर २:०० बजे तक"
+      },
+      "venue": {
+        "en": "Sharda Vihar Colony, Sector B, Near Natiniyadai, Varanasi",
+        "hi": "शारदा विहार कॉलोनी, सेक्टर बी, नतिनियादाई के पास, वाराणसी"
+      },
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sharda+Vihar+Colony+Sector+B+Near+Natiniyadai+Varanasi",
+      "description": {
+        "en": "Join us for our auspicious Haldi ceremony filled with turmeric, music, and blessings.",
+        "hi": "हल्दी के पावन उबटन और मंगल गीतों के साथ वैवाहिक उत्सव का शुभारंभ।"
+      },
+      "calendarDates": "20261209T043000Z/20261209T083000Z"
+    },
+    {
+      "id": "mehendi",
+      "name": {
+        "en": "Mehendi",
+        "hi": "मेहंदी"
+      },
+      "bg": "#f0fdf4",
+      "accent": "#166534",
+      "onAccent": "#ffffff",
+      "artwork": {
+        "base": "/artwork/1f4204aa7561c3620d37",
+        "widths": [
+          320,
+          640,
+          960
+        ],
+        "w": 960,
+        "h": 1440
+      },
+      "corners": [
+        "/artwork/f4f8dcb91b52c6e89906/160.webp",
+        "/artwork/575e39f1b93e4815db95/160.webp",
+        "/artwork/8d09468bd01d36907514/160.webp",
+        "/artwork/b04fa62e21482329b35f/160.webp"
+      ],
+      "date": {
+        "en": "10 December 2026",
+        "hi": "१० दिसंबर २०२६ (गुरुवार)"
+      },
+      "time": {
+        "en": "4:00 pm – 7:30 pm",
+        "hi": "अपराह्न ४:०० से सायं ७:३० बजे तक"
+      },
+      "venue": {
+        "en": "Sharda Vihar Colony, Sector B, Near Natiniyadai, Varanasi",
+        "hi": "शारदा विहार कॉलोनी, सेक्टर बी, नतिनियादाई के पास, वाराणसी"
+      },
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sharda+Vihar+Colony+Sector+B+Near+Natiniyadai+Varanasi",
+      "description": {
+        "en": "Adorning hands with auspicious henna designs, folk beats, and joyous smiles.",
+        "hi": "हाथों में रचेगी शगुन की मेहंदी और सजेगा खुशियों का संसार।"
+      },
+      "calendarDates": "20261210T103000Z/20261210T140000Z"
+    },
+    {
+      "id": "sangeet",
+      "name": {
+        "en": "Sangeet",
+        "hi": "संगीत"
+      },
+      "bg": "#f4e9ff",
+      "accent": "#5b21b6",
+      "onAccent": "#ffffff",
+      "artwork": {
+        "base": "/artwork/09b9a81872f3790cb9e8",
+        "widths": [
+          320,
+          640,
+          960
+        ],
+        "w": 960,
+        "h": 1200
+      },
+      "corners": [
+        "/artwork/559788e126c72e472af2/160.webp",
+        "/artwork/e1795b7b843f21c347ea/160.webp",
+        "/artwork/325e367c48a01602c993/160.webp",
+        "/artwork/0f300f1fc97426ac2845/160.webp"
+      ],
+      "date": {
+        "en": "10 December 2026",
+        "hi": "१० दिसंबर २०२६ (गुरुवार)"
+      },
+      "time": {
+        "en": "7:30 pm – 11:30 pm",
+        "hi": "सायं ७:३० से रात्रि ११:३० बजे तक"
+      },
+      "venue": {
+        "en": "Sharda Vihar Colony, Sector B, Near Natiniyadai, Varanasi",
+        "hi": "शारदा विहार कॉलोनी, सेक्टर बी, नतिनियादाई के पास, वाराणसी"
+      },
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sharda+Vihar+Colony+Sector+B+Near+Natiniyadai+Varanasi",
+      "description": {
+        "en": "An evening of melodies, celebration, dance, and unforgettable memories.",
+        "hi": "सुरों, तालों और नृत्य के संग हर्षोल्लास भरी संगीतमय शाम।"
+      },
+      "calendarDates": "20261210T140000Z/20261210T180000Z"
+    },
+    {
+      "id": "shaadi",
+      "name": {
+        "en": "Shaadi",
+        "hi": "शुभ विवाह"
+      },
+      "bg": "#fdece0",
+      "accent": "#be185d",
+      "onAccent": "#ffffff",
+      "artwork": {
+        "base": "/artwork/3af2584f3acaff1a5bb8",
+        "widths": [
+          320,
+          640,
+          960
+        ],
+        "w": 960,
+        "h": 1200
+      },
+      "corners": [
+        "/artwork/61d9351297851b92e6ce/160.webp",
+        "/artwork/a35ea22444fc2cf65799/160.webp",
+        "/artwork/2d865c04af139ffb0b47/160.webp",
+        "/artwork/34fbd207816057630388/160.webp"
+      ],
+      "date": {
+        "en": "11 December 2026",
+        "hi": "११ दिसंबर २०२६ (शुक्रवार)"
+      },
+      "time": {
+        "en": "6:00 pm – 11:00 pm",
+        "hi": "सायं ६:०० बजे से (शुभ लगन, जयमाला एवं सात फेरे)"
+      },
+      "venue": {
+        "en": "Royal Green Garden, Near Natiniyadai, Varanasi",
+        "hi": "रॉयल ग्रीन गार्डन, नतिनियादाई के पास, वाराणसी"
+      },
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Royal+Green+Garden+Varanasi+near+Natiniyadai",
+      "description": {
+        "en": "Join us as we take our sacred wedding vows and celebrate our union.",
+        "hi": "अग्नि को साक्षी मानकर सात फेरों के साथ जीवनभर का पावन बंधन।"
+      },
+      "calendarDates": "20261211T123000Z/20261211T173000Z"
+    }
+  ],
+  "story": {
+    "title": {
+      "en": "Different paths, one beautiful beginning.",
+      "hi": "अलग राहें, एक ख़ूबसूरत शुरुआत"
+    },
+    "intro": {
+      "en": "From our first conversation to the plans we are making now, it has been the everyday moments that made this feel like us.",
+      "hi": "पहली बातचीत से लेकर आज के इन हसीन पलों तक, हर छोटे-बड़े लम्हे ने हमें एक दूजे का बना दिया।"
+    },
+    "portrait": {
+      "base": "/artwork/bc49032a778aa403493e",
+      "widths": [
+        320,
+        640,
+        960
+      ],
+      "w": 1374,
+      "h": 1145
+    },
+    "milestones": [
+      {
+        "icon": "cap",
+        "title": {
+          "en": "We Met",
+          "hi": "पहली मुलाक़ात"
+        },
+        "text": {
+          "en": "A college event brought us together. We stayed long after it ended, talking about everything except the reason we had come.",
+          "hi": "एक कार्यक्रम में हमारी पहली मुलाकात हुई। वह बातचीत जो शुरू हुई तो वक़्त का पता ही नहीं चला।"
+        },
+        "image": {
+          "base": "/artwork/e05f964f3fff4648511f",
+          "widths": [
+            320,
+            597
+          ],
+          "w": 597,
+          "h": 485
+        }
+      },
+      {
+        "icon": "heart",
+        "title": {
+          "en": "We Grew",
+          "hi": "साथ-साथ बढ़ता प्यार"
+        },
+        "text": {
+          "en": "There were shared playlists, long calls and plenty of coffee. Little by little, we became the first person the other wanted to tell.",
+          "hi": "साझा किए गए गीत, लंबी बातें और कॉफ़ी की चुस्कियां... धीरे-धीरे हम एक-दूजे की सबसे पहली पसंद बन गए।"
+        },
+        "image": {
+          "base": "/artwork/497cd7a13a72bf1c0054",
+          "widths": [
+            320,
+            566
+          ],
+          "w": 566,
+          "h": 495
+        }
+      },
+      {
+        "icon": "plane",
+        "title": {
+          "en": "We Explored",
+          "hi": "यादों का सफ़र"
+        },
+        "text": {
+          "en": "From quiet hill stations to busy city streets, we found new places and new reasons to enjoy doing life together.",
+          "hi": "शांत वादियों से लेकर शहरों की चहल-पहल तक, हमने हर मोड़ पर साथ जीने के नए बहाने खोजे।"
+        },
+        "image": {
+          "base": "/artwork/30e4b1bc104d6f881a26",
+          "widths": [
+            320,
+            640,
+            699
+          ],
+          "w": 699,
+          "h": 470
+        }
+      },
+      {
+        "icon": "rings",
+        "title": {
+          "en": "Now, Forever",
+          "hi": "अब, और हमेशा के लिए"
+        },
+        "text": {
+          "en": "One very happy yes, and here we are. Our next adventure begins with our favourite people beside us, and that includes you.",
+          "hi": "एक खूबसूरत \"हाँ\" के साथ हमारा यह नया सफ़र शुरू हो रहा है, और इसमें आपका साथ हमारे लिए अनमोल है।"
+        },
+        "image": {
+          "base": "/artwork/aa7155d57a86ef067c06",
+          "widths": [
+            320,
+            514
+          ],
+          "w": 514,
+          "h": 463
+        }
+      }
+    ],
+    "closing": {
+      "en": "Two stories, and so much still to write together.",
+      "hi": "दो कहानियां, और अब मिलकर लिखने को पूरी जिंदगी।"
+    }
+  },
+  "note": {
+    "en": "Your presence will make our celebrations complete. We look forward to sharing these special moments with you.",
+    "hi": "आपकी उपस्थिति हमारे इस वैवाहिक उत्सव को पूर्ण बनाएगी। इन पावन एवं अविस्मरणीय क्षणों में आपका स्नेहिल सान्निध्य सादर प्रार्थनीय है।"
+  },
+  "quote": {
+    "text": {
+      "en": "Two souls united by seven sacred vows into a lifetime of endless love, faith, and shared dreams. Your gracious presence and heartfelt blessings make our celebrations complete.",
+      "hi": "सात फेरों का यह पावन बंधन, दो हृदयों का अनंत संगम है। हमारे जीवन के इस सबसे खूबसूरत अध्याय की शुरुआत पर आपका स्नेहिल आशीर्वाद और सान्निध्य हमारी सबसे अनमोल धरोहर होगी।"
+    },
+    "hosts": {
+      "en": "Sharma & Mishra Family Cordially Welcomes You",
+      "hi": "शर्मा एवं मिश्रा परिवार आपका सादर वंदन करता है"
+    }
+  },
+  "music": "/music/wedding-music.mp3"
+}

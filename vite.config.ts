@@ -1,21 +1,30 @@
 import react from '@vitejs/plugin-react';
-import path from 'path';
-import {defineConfig} from 'vite';
+import {defineConfig, type Connect} from 'vite';
 
-export default defineConfig(() => {
-  return {
-    plugins: [react()],
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '.'),
-      },
+// One HTML entry per URL: / (chooser), /rishabh/, /purva/.
+// Each invite page picks its JSON via <html data-invite="...">.
+const INVITES = ['rishabh', 'purva'];
+
+// /rishabh -> /rishabh/ in dev + preview (static hosts like Netlify/Vercel/GitHub Pages do this themselves).
+const addSlash: Connect.NextHandleFunction = (req, res, next) => {
+  const [path, query] = (req.url ?? '').split('?');
+  if (!INVITES.includes(path.slice(1))) return next();
+  res.writeHead(301, {Location: `${path}/${query ? `?${query}` : ''}`}).end();
+};
+
+export default defineConfig({
+  appType: 'mpa',
+  plugins: [
+    react(),
+    {
+      name: 'invite-trailing-slash',
+      configureServer: (s) => void s.middlewares.use(addSlash),
+      configurePreviewServer: (s) => void s.middlewares.use(addSlash),
     },
-    server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modify—file watching is disabled to prevent flickering during agent edits.
-      hmr: process.env.DISABLE_HMR !== 'true',
-      // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
-      watch: process.env.DISABLE_HMR === 'true' ? null : {},
+  ],
+  build: {
+    rollupOptions: {
+      input: ['index.html', ...INVITES.map((slug) => `${slug}/index.html`)],
     },
-  };
+  },
 });

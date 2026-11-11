@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import confetti from 'canvas-confetti';
 import { useLanguage } from '../context/LanguageContext';
+import { coupleLine } from '../data/invite';
 
 interface EnvelopeEntranceProps {
   onOpen: () => void;
@@ -17,18 +18,14 @@ export const EnvelopeEntrance: React.FC<EnvelopeEntranceProps> = ({ onOpen }) =>
     setIsOpening(true);
     onOpen();
 
-    try {
-      confetti({
-        particleCount: 70,
-        spread: 80,
-        origin: { y: 0.55 },
-        colors: ['#c12023', '#f8d777', '#f6c453', '#ffffff', '#e36044'],
-      });
-    } catch {}
+    confetti({
+      particleCount: 70,
+      spread: 80,
+      origin: { y: 0.55 },
+      colors: ['#c12023', '#f8d777', '#f6c453', '#ffffff', '#e36044'],
+    });
 
-    setTimeout(() => {
-      setIsOpen(false);
-    }, 3200);
+    setTimeout(() => setIsOpen(false), 3200);
   };
 
   if (!isOpen) return null;
@@ -38,8 +35,7 @@ export const EnvelopeEntrance: React.FC<EnvelopeEntranceProps> = ({ onOpen }) =>
       className={`envelope-entrance envelope-rose ${isOpening ? 'is-opening' : ''}`}
       data-envelope-entrance
       open
-      style={{ zIndex: 9999 }}
-      aria-label="Wedding invitation for Purva and Rishabh"
+      aria-label={`Wedding invitation for ${coupleLine('en', 'short').replace('&', 'and')}`}
     >
       <svg
         className="envelope-confetti"
@@ -130,7 +126,7 @@ export const EnvelopeEntrance: React.FC<EnvelopeEntranceProps> = ({ onOpen }) =>
                 </defs>
                 <text textAnchor="middle">
                   <textPath href="#envelope-seal-caption" startOffset="50%">
-                    {lang === 'hi' ? 'खोलें' : 'TAP HERE'}
+                    {t('TAP HERE', 'खोलें')}
                   </textPath>
                 </text>
                 <path d="M100 179l-6-6c-5-5 2-11 6-5c4-6 11 0 6 5Z" />
@@ -146,16 +142,13 @@ export const EnvelopeEntrance: React.FC<EnvelopeEntranceProps> = ({ onOpen }) =>
               <circle cx="12" cy="12" r="10" />
               <path d="M12 2a14.5 14.5 0 0 0 0 20M12 2a14.5 14.5 0 0 1 0 20M2 12h20" />
             </svg>
-            <span>{lang === 'hi' ? 'भाषा चुनें:' : 'Select Language:'}</span>
+            <span>{t('Select Language:', 'भाषा चुनें:')}</span>
           </span>
           <div className="envelope-lang-options" role="radiogroup" aria-label="Language options">
             <button
               type="button"
               className={`envelope-lang-chip ${lang === 'en' ? 'is-selected' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                setLang('en');
-              }}
+              onClick={() => setLang('en')}
               aria-checked={lang === 'en'}
               role="radio"
             >
@@ -165,10 +158,7 @@ export const EnvelopeEntrance: React.FC<EnvelopeEntranceProps> = ({ onOpen }) =>
             <button
               type="button"
               className={`envelope-lang-chip ${lang === 'hi' ? 'is-selected' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                setLang('hi');
-              }}
+              onClick={() => setLang('hi')}
               aria-checked={lang === 'hi'}
               role="radio"
             >

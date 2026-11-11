@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import { EnvelopeEntrance } from './components/EnvelopeEntrance';
 import { MusicPlayer, MusicPlayerHandle } from './components/MusicPlayer';
