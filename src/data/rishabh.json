@@ -35,8 +35,8 @@
   "families": [
     {
       "names": {
-        "en": "Shushil Kumar\n& Pravesh Sharma",
-        "hi": "श्री सुशील कुमार\nएवं श्रीमती प्रवेश शर्मा"
+        "en": "Shri Sushil Kumar Sharma\n& Shrimati Pravesh Devi",
+        "hi": "श्री सुशील कुमार शर्मा\nएवं श्रीमती प्रवेश देवी"
       },
       "role": {
         "en": "Bride's parents",
@@ -45,8 +45,8 @@
     },
     {
       "names": {
-        "en": "Ram Balak\n& Sarojani Mishra",
-        "hi": "श्री राम बालक\nएवं श्रीमती सरोजनी मिश्रा"
+        "en": "Shri Ram Balak Mishra\n& Shrimati Sarojani Devi",
+        "hi": "श्री राम बालक मिश्रा\nएवं श्रीमती सरोजनी देवी"
       },
       "role": {
         "en": "Groom's parents",
@@ -120,7 +120,7 @@
         "en": "Sharda Vihar Colony, Sector B, Near Natiniyadai, Varanasi",
         "hi": "शारदा विहार कॉलोनी, सेक्टर बी, नतिनियादाई के पास, वाराणसी"
       },
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sharda+Vihar+Colony+Sector+B+Near+Natiniyadai+Varanasi",
+      "mapUrl": "https://www.google.com/maps/place//@25.3663338,82.9635382,16.58z",
       "description": {
         "en": "Join us for our auspicious Haldi ceremony filled with turmeric, music, and blessings.",
         "hi": "हल्दी के पावन उबटन और मंगल गीतों के साथ वैवाहिक उत्सव का शुभारंभ।"
@@ -164,7 +164,7 @@
         "en": "Sharda Vihar Colony, Sector B, Near Natiniyadai, Varanasi",
         "hi": "शारदा विहार कॉलोनी, सेक्टर बी, नतिनियादाई के पास, वाराणसी"
       },
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sharda+Vihar+Colony+Sector+B+Near+Natiniyadai+Varanasi",
+      "mapUrl": "https://www.google.com/maps/place//@25.3663338,82.9635382,16.58z",
       "description": {
         "en": "Adorning hands with auspicious henna designs, folk beats, and joyous smiles.",
         "hi": "हाथों में रचेगी शगुन की मेहंदी और सजेगा खुशियों का संसार।"
@@ -208,7 +208,7 @@
         "en": "Sharda Vihar Colony, Sector B, Near Natiniyadai, Varanasi",
         "hi": "शारदा विहार कॉलोनी, सेक्टर बी, नतिनियादाई के पास, वाराणसी"
       },
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sharda+Vihar+Colony+Sector+B+Near+Natiniyadai+Varanasi",
+      "mapUrl": "https://www.google.com/maps/place//@25.3663338,82.9635382,16.58z",
       "description": {
         "en": "An evening of melodies, celebration, dance, and unforgettable memories.",
         "hi": "सुरों, तालों और नृत्य के संग हर्षोल्लास भरी संगीतमय शाम।"
@@ -252,7 +252,7 @@
         "en": "Royal Green Garden, Near Natiniyadai, Varanasi",
         "hi": "रॉयल ग्रीन गार्डन, नतिनियादाई के पास, वाराणसी"
       },
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Royal+Green+Garden+Varanasi+near+Natiniyadai",
+      "mapUrl": "https://www.google.com/maps/place/The+Royal+Green+Garden/@25.3663338,82.9635382,16.58z/data=!4m6!3m5!1s0x398e2d9ed27a1d97:0x5b0a98009fc1488e!8m2!3d25.3682127!4d82.9643264!16s%2Fg%2F11k876dm0d",
       "description": {
         "en": "Join us as we take our sacred wedding vows and celebrate our union.",
         "hi": "अग्नि को साक्षी मानकर सात फेरों के साथ जीवनभर का पावन बंधन।"

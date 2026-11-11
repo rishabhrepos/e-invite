@@ -13,16 +13,6 @@
   "couple": [
     {
       "full": {
-        "en": "Rishabh Mishra",
-        "hi": "ऋषभ मिश्रा"
-      },
-      "short": {
-        "en": "Rishabh",
-        "hi": "ऋषभ"
-      }
-    },
-    {
-      "full": {
         "en": "Purva Sharma",
         "hi": "पूर्वा शर्मा"
       },
@@ -30,27 +20,37 @@
         "en": "Purva",
         "hi": "पूर्वा"
       }
+    },
+    {
+      "full": {
+        "en": "Rishabh Mishra",
+        "hi": "ऋषभ मिश्रा"
+      },
+      "short": {
+        "en": "Rishabh",
+        "hi": "ऋषभ"
+      }
     }
   ],
   "families": [
     {
       "names": {
-        "en": "Ram Balak\n& Sarojani Mishra",
-        "hi": "श्री राम बालक\nएवं श्रीमती सरोजनी मिश्रा"
-      },
-      "role": {
-        "en": "Groom's parents",
-        "hi": "वर के माता-पिता"
-      }
-    },
-    {
-      "names": {
-        "en": "Shushil Kumar\n& Pravesh Sharma",
-        "hi": "श्री सुशील कुमार\nएवं श्रीमती प्रवेश शर्मा"
+        "en": "Shri Sushil Kumar Sharma\n& Shrimati Pravesh Devi",
+        "hi": "श्री सुशील कुमार शर्मा\nएवं श्रीमती प्रवेश देवी"
       },
       "role": {
         "en": "Bride's parents",
         "hi": "कन्या के माता-पिता"
+      }
+    },
+    {
+      "names": {
+        "en": "Shri Ram Balak Mishra\n& Shrimati Sarojani Devi",
+        "hi": "श्री राम बालक मिश्रा\nएवं श्रीमती सरोजनी देवी"
+      },
+      "role": {
+        "en": "Groom's parents",
+        "hi": "वर के माता-पिता"
       }
     }
   ],
@@ -117,10 +117,10 @@
         "hi": "प्रातः १०:०० से दोपहर २:०० बजे तक"
       },
       "venue": {
-        "en": "Venue to be announced (dummy data)",
-        "hi": "स्थान शीघ्र सूचित किया जाएगा"
+        "en": "Pahasu, Uttar Pradesh 203396",
+        "hi": "पहासू, उत्तर प्रदेश २०३३९६"
       },
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Varanasi",
+      "mapUrl": "https://www.google.com/maps/place/Pahasu,+Uttar+Pradesh+203396/@28.1859423,78.0022153,18.5z/data=!4m6!3m5!1s0x390b531e49ba3b11:0x426fdc4ce6a07424!8m2!3d28.1748459!4d78.0623403!16zL20vMGY1d3hi",
       "description": {
         "en": "Join us for our auspicious Haldi ceremony filled with turmeric, music, and blessings.",
         "hi": "हल्दी के पावन उबटन और मंगल गीतों के साथ वैवाहिक उत्सव का शुभारंभ।"
@@ -161,10 +161,10 @@
         "hi": "अपराह्न ४:०० से सायं ७:३० बजे तक"
       },
       "venue": {
-        "en": "Venue to be announced (dummy data)",
-        "hi": "स्थान शीघ्र सूचित किया जाएगा"
+        "en": "Pahasu, Uttar Pradesh 203396",
+        "hi": "पहासू, उत्तर प्रदेश २०३३९६"
       },
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Varanasi",
+      "mapUrl": "https://www.google.com/maps/place/Pahasu,+Uttar+Pradesh+203396/@28.1859423,78.0022153,18.5z/data=!4m6!3m5!1s0x390b531e49ba3b11:0x426fdc4ce6a07424!8m2!3d28.1748459!4d78.0623403!16zL20vMGY1d3hi",
       "description": {
         "en": "Adorning hands with auspicious henna designs, folk beats, and joyous smiles.",
         "hi": "हाथों में रचेगी शगुन की मेहंदी और सजेगा खुशियों का संसार।"
@@ -205,10 +205,10 @@
         "hi": "सायं ७:३० से रात्रि ११:३० बजे तक"
       },
       "venue": {
-        "en": "Venue to be announced (dummy data)",
-        "hi": "स्थान शीघ्र सूचित किया जाएगा"
+        "en": "Pahasu, Uttar Pradesh 203396",
+        "hi": "पहासू, उत्तर प्रदेश २०३३९६"
       },
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Varanasi",
+      "mapUrl": "https://www.google.com/maps/place/Pahasu,+Uttar+Pradesh+203396/@28.1859423,78.0022153,18.5z/data=!4m6!3m5!1s0x390b531e49ba3b11:0x426fdc4ce6a07424!8m2!3d28.1748459!4d78.0623403!16zL20vMGY1d3hi",
       "description": {
         "en": "An evening of melodies, celebration, dance, and unforgettable memories.",
         "hi": "सुरों, तालों और नृत्य के संग हर्षोल्लास भरी संगीतमय शाम।"
@@ -252,7 +252,7 @@
         "en": "Royal Green Garden, Near Natiniyadai, Varanasi",
         "hi": "रॉयल ग्रीन गार्डन, नतिनियादाई के पास, वाराणसी"
       },
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Royal+Green+Garden+Varanasi+near+Natiniyadai",
+      "mapUrl": "https://www.google.com/maps/place/The+Royal+Green+Garden/@25.3663338,82.9635382,16.58z/data=!4m6!3m5!1s0x398e2d9ed27a1d97:0x5b0a98009fc1488e!8m2!3d25.3682127!4d82.9643264!16s%2Fg%2F11k876dm0d",
       "description": {
         "en": "Join us as we take our sacred wedding vows and celebrate our union.",
         "hi": "अग्नि को साक्षी मानकर सात फेरों के साथ जीवनभर का पावन बंधन।"
