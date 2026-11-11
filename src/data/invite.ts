@@ -16,10 +16,15 @@ export const invite = invites[document.documentElement.dataset.invite ?? ''] ?? 
 export const coupleLine = (lang: Language, key: 'full' | 'short' = 'full') =>
   invite.couple.map((p) => p[key][lang]).join(lang === 'hi' ? ' एवं ' : ' & ');
 
+/** Prefix a /public path with Vite's base ("/" in dev, "/e-invite/" on GitHub Pages). */
+export const asset = (p: string) => import.meta.env.BASE_URL + p.replace(/^\//, '');
+/** asset() for every URL in a srcset string. */
+export const assetSet = (set: string) => set.replace(/(^|,\s*)(\/\S+)/g, (_, sep, url) => sep + asset(url));
+
 /** src + srcSet for an artwork folder of /<width>.webp files. src = largest width <= 640. */
 export const art = (a: Art) => ({
-  src: `${a.base}/${Math.max(...a.widths.filter((w) => w <= 640))}.webp`,
-  srcSet: a.widths.map((w) => `${a.base}/${w}.webp ${w}w`).join(', '),
+  src: asset(`${a.base}/${Math.max(...a.widths.filter((w) => w <= 640))}.webp`),
+  srcSet: assetSet(a.widths.map((w) => `${a.base}/${w}.webp ${w}w`).join(', ')),
   width: a.w,
   height: a.h,
 });

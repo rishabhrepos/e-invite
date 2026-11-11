@@ -13,6 +13,8 @@ const addSlash: Connect.NextHandleFunction = (req, res, next) => {
 };
 
 export default defineConfig({
+  // GitHub Pages serves the site from /e-invite/; the workflow sets BASE_PATH. Dev stays at /.
+  base: process.env.BASE_PATH ?? '/',
   appType: 'mpa',
   plugins: [
     react(),

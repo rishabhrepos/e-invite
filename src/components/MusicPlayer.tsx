@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect, forwardRef, useImperativeHandle } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { invite } from '../data/invite';
+import { invite, asset } from '../data/invite';
 
 export interface MusicPlayerHandle {
   play: () => void;
@@ -134,7 +134,7 @@ export const MusicPlayer = forwardRef<MusicPlayerHandle>((_, ref) => {
     >
       <audio
         ref={audioRef}
-        src={invite.music}
+        src={asset(invite.music)}
         preload="auto"
         loop
         playsInline

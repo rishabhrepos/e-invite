@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { invite, art } from '../data/invite';
+import { invite, art, asset, assetSet } from '../data/invite';
 import { Icon, type IconName } from './Icon';
 
 const story = invite.story;
@@ -13,8 +13,8 @@ export const OurStory: React.FC = () => {
       <div className="story-decor" aria-hidden="true">
         <img
           className="story-corner story-corner--topLeft"
-          src="/artwork/eb0d022875a4614b2e34/160.webp"
-          srcSet="/artwork/eb0d022875a4614b2e34/160.webp 160w, /artwork/eb0d022875a4614b2e34/320.webp 320w"
+          src={asset('/artwork/eb0d022875a4614b2e34/160.webp')}
+          srcSet={assetSet('/artwork/eb0d022875a4614b2e34/160.webp 160w, /artwork/eb0d022875a4614b2e34/320.webp 320w')}
           sizes="(min-width: 768px) 140px, 22vw"
           width="441"
           height="535"
@@ -23,8 +23,8 @@ export const OurStory: React.FC = () => {
         />
         <img
           className="story-corner story-corner--topRight"
-          src="/artwork/aee067f0f96c2246d2a4/160.webp"
-          srcSet="/artwork/aee067f0f96c2246d2a4/160.webp 160w, /artwork/aee067f0f96c2246d2a4/320.webp 320w"
+          src={asset('/artwork/aee067f0f96c2246d2a4/160.webp')}
+          srcSet={assetSet('/artwork/aee067f0f96c2246d2a4/160.webp 160w, /artwork/aee067f0f96c2246d2a4/320.webp 320w')}
           sizes="(min-width: 768px) 140px, 22vw"
           width="446"
           height="566"
@@ -33,8 +33,8 @@ export const OurStory: React.FC = () => {
         />
         <img
           className="story-corner story-corner--bottomLeft"
-          src="/artwork/53665d33edfd01a3c449/160.webp"
-          srcSet="/artwork/53665d33edfd01a3c449/160.webp 160w, /artwork/53665d33edfd01a3c449/320.webp 320w"
+          src={asset('/artwork/53665d33edfd01a3c449/160.webp')}
+          srcSet={assetSet('/artwork/53665d33edfd01a3c449/160.webp 160w, /artwork/53665d33edfd01a3c449/320.webp 320w')}
           sizes="(min-width: 768px) 140px, 22vw"
           width="523"
           height="410"
@@ -43,8 +43,8 @@ export const OurStory: React.FC = () => {
         />
         <img
           className="story-corner story-corner--bottomRight"
-          src="/artwork/ed5fb176e6e6facdaad3/160.webp"
-          srcSet="/artwork/ed5fb176e6e6facdaad3/160.webp 160w, /artwork/ed5fb176e6e6facdaad3/320.webp 320w"
+          src={asset('/artwork/ed5fb176e6e6facdaad3/160.webp')}
+          srcSet={assetSet('/artwork/ed5fb176e6e6facdaad3/160.webp 160w, /artwork/ed5fb176e6e6facdaad3/320.webp 320w')}
           sizes="(min-width: 768px) 140px, 22vw"
           width="493"
           height="383"

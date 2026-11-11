@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { invite } from '../data/invite';
+import { invite, asset, assetSet } from '../data/invite';
 import { Icon } from './Icon';
 
 const inv = invite.invitation;
@@ -12,8 +12,8 @@ export const InvitationCard: React.FC = () => {
     <section className="inv-card" id="invitation" aria-label="An invitation from our families">
       <img
           className="inv-corner inv-corner--tl"
-          src="/artwork/629d871098ccdc336585/160.webp"
-          srcSet="/artwork/629d871098ccdc336585/160.webp 160w, /artwork/629d871098ccdc336585/275.webp 275w"
+          src={asset('/artwork/629d871098ccdc336585/160.webp')}
+          srcSet={assetSet('/artwork/629d871098ccdc336585/160.webp 160w, /artwork/629d871098ccdc336585/275.webp 275w')}
           sizes="(max-width: 767px) 22vw, 150px"
           width="275"
           height="526"
@@ -22,8 +22,8 @@ export const InvitationCard: React.FC = () => {
         />
         <img
           className="inv-corner inv-corner--tr"
-          src="/artwork/5218fefe5bdc73055d75/160.webp"
-          srcSet="/artwork/5218fefe5bdc73055d75/160.webp 160w, /artwork/5218fefe5bdc73055d75/270.webp 270w"
+          src={asset('/artwork/5218fefe5bdc73055d75/160.webp')}
+          srcSet={assetSet('/artwork/5218fefe5bdc73055d75/160.webp 160w, /artwork/5218fefe5bdc73055d75/270.webp 270w')}
           sizes="(max-width: 767px) 22vw, 150px"
           width="270"
           height="537"
@@ -32,8 +32,8 @@ export const InvitationCard: React.FC = () => {
         />
         <img
           className="inv-corner inv-corner--bl"
-          src="/artwork/2740ecffde7c0b189ac3/160.webp"
-          srcSet="/artwork/2740ecffde7c0b189ac3/160.webp 160w, /artwork/2740ecffde7c0b189ac3/320.webp 320w"
+          src={asset('/artwork/2740ecffde7c0b189ac3/160.webp')}
+          srcSet={assetSet('/artwork/2740ecffde7c0b189ac3/160.webp 160w, /artwork/2740ecffde7c0b189ac3/320.webp 320w')}
           sizes="(max-width: 767px) 22vw, 150px"
           width="440"
           height="897"
@@ -42,8 +42,8 @@ export const InvitationCard: React.FC = () => {
         />
         <img
           className="inv-corner inv-corner--br"
-          src="/artwork/d0fde787562b0a34ef7e/160.webp"
-          srcSet="/artwork/d0fde787562b0a34ef7e/160.webp 160w, /artwork/d0fde787562b0a34ef7e/320.webp 320w"
+          src={asset('/artwork/d0fde787562b0a34ef7e/160.webp')}
+          srcSet={assetSet('/artwork/d0fde787562b0a34ef7e/160.webp 160w, /artwork/d0fde787562b0a34ef7e/320.webp 320w')}
           sizes="(max-width: 767px) 22vw, 150px"
           width="440"
           height="892"

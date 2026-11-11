@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { invite, art, coupleLine, type InviteEvent } from '../data/invite';
+import { invite, art, asset, coupleLine, type InviteEvent } from '../data/invite';
 import { Icon } from './Icon';
 
 // RFC 5545 text escaping
@@ -89,10 +89,10 @@ export const FloralCelebrations: React.FC = () => {
               '--ec-on-accent': e.onAccent,
             } as React.CSSProperties}
           >
-            <img className="ec-corner ec-corner--tl" src={e.corners[0]} alt="" loading="lazy" />
-            <img className="ec-corner ec-corner--tr" src={e.corners[1]} alt="" loading="lazy" />
-            <img className="ec-corner ec-corner--bl" src={e.corners[2]} alt="" loading="lazy" />
-            <img className="ec-corner ec-corner--br" src={e.corners[3]} alt="" loading="lazy" />
+            <img className="ec-corner ec-corner--tl" src={asset(e.corners[0])} alt="" loading="lazy" />
+            <img className="ec-corner ec-corner--tr" src={asset(e.corners[1])} alt="" loading="lazy" />
+            <img className="ec-corner ec-corner--bl" src={asset(e.corners[2])} alt="" loading="lazy" />
+            <img className="ec-corner ec-corner--br" src={asset(e.corners[3])} alt="" loading="lazy" />
 
             <div className="ec-layout">
               <div className="ec-title-section">

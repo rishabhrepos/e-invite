@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { invite, art } from '../data/invite';
+import { invite, art, asset, assetSet } from '../data/invite';
 import { Icon } from './Icon';
 
 const WEDDING_TIMESTAMP = Date.parse(invite.weddingISO);
@@ -36,8 +36,8 @@ export const FloralHero: React.FC = () => {
       <div className="floral-hero-background" aria-hidden="true">
         <img
           className="hero-background-image"
-          src="/artwork/d95f06435b873e08508a/1280.webp"
-          srcSet="/artwork/d95f06435b873e08508a/640.webp 640w, /artwork/d95f06435b873e08508a/1280.webp 1280w, /artwork/d95f06435b873e08508a/1536.webp 1536w"
+          src={asset('/artwork/d95f06435b873e08508a/1280.webp')}
+          srcSet={assetSet('/artwork/d95f06435b873e08508a/640.webp 640w, /artwork/d95f06435b873e08508a/1280.webp 1280w, /artwork/d95f06435b873e08508a/1536.webp 1536w')}
           sizes="100vw"
           width="1536"
           height="1024"
@@ -50,8 +50,8 @@ export const FloralHero: React.FC = () => {
       <div className="floral-hero-corners" aria-hidden="true">
         <img
           className="hero-corner hero-corner--tl"
-          src="/artwork/f611b1498764d10c8bc8/320.webp"
-          srcSet="/artwork/f611b1498764d10c8bc8/160.webp 160w, /artwork/f611b1498764d10c8bc8/320.webp 320w"
+          src={asset('/artwork/f611b1498764d10c8bc8/320.webp')}
+          srcSet={assetSet('/artwork/f611b1498764d10c8bc8/160.webp 160w, /artwork/f611b1498764d10c8bc8/320.webp 320w')}
           sizes="(max-width: 767px) 30vw, (max-width: 1454px) 22vw, 320px"
           width="484"
           height="525"
@@ -61,8 +61,8 @@ export const FloralHero: React.FC = () => {
         />
         <img
           className="hero-corner hero-corner--tr"
-          src="/artwork/23da43eec046afd50756/320.webp"
-          srcSet="/artwork/23da43eec046afd50756/160.webp 160w, /artwork/23da43eec046afd50756/320.webp 320w"
+          src={asset('/artwork/23da43eec046afd50756/320.webp')}
+          srcSet={assetSet('/artwork/23da43eec046afd50756/160.webp 160w, /artwork/23da43eec046afd50756/320.webp 320w')}
           sizes="(max-width: 767px) 30vw, (max-width: 1454px) 22vw, 320px"
           width="559"
           height="533"
@@ -72,8 +72,8 @@ export const FloralHero: React.FC = () => {
         />
         <img
           className="hero-corner hero-corner--bl"
-          src="/artwork/28bf2c120beca9d96bc2/320.webp"
-          srcSet="/artwork/28bf2c120beca9d96bc2/160.webp 160w, /artwork/28bf2c120beca9d96bc2/320.webp 320w"
+          src={asset('/artwork/28bf2c120beca9d96bc2/320.webp')}
+          srcSet={assetSet('/artwork/28bf2c120beca9d96bc2/160.webp 160w, /artwork/28bf2c120beca9d96bc2/320.webp 320w')}
           sizes="(max-width: 767px) 30vw, (max-width: 1454px) 22vw, 320px"
           width="504"
           height="438"
@@ -82,8 +82,8 @@ export const FloralHero: React.FC = () => {
         />
         <img
           className="hero-corner hero-corner--br"
-          src="/artwork/5356743a8c106cd26e08/320.webp"
-          srcSet="/artwork/5356743a8c106cd26e08/160.webp 160w, /artwork/5356743a8c106cd26e08/320.webp 320w"
+          src={asset('/artwork/5356743a8c106cd26e08/320.webp')}
+          srcSet={assetSet('/artwork/5356743a8c106cd26e08/160.webp 160w, /artwork/5356743a8c106cd26e08/320.webp 320w')}
           sizes="(max-width: 767px) 30vw, (max-width: 1454px) 22vw, 320px"
           width="535"
           height="437"
@@ -97,7 +97,7 @@ export const FloralHero: React.FC = () => {
           <div className="hero-blessing">
             <img
               className="hero-ganesha"
-              src="/lord_ganesha.svg"
+              src={asset('/lord_ganesha.svg')}
               alt="Lord Ganesha"
               width="1200"
               height="1310"
